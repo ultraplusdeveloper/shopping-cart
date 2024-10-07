@@ -19,12 +19,12 @@
        <!-- Menu (Ellipsis) Icon -->
        <div class="menu-icon">
         <i class="fa-solid fa-bars"></i>
+        <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Contacts</a></li>
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Help</a></li>
           </ul>
-        </div>
       </div>
 
       <!-- Search Bar -->
@@ -50,6 +50,16 @@
         <i class="fas fa-shopping-cart"></i>
         <span class="cart-count">0</span>
       </div>
+<!-- Cart Modal -->
+        <div class="cart-modal">
+          <div class="cart-modal-content">
+            <span class="close-modal">&times;</span>
+
+          <ul class="cart-items">
+          </ul>
+          <div class="total-price">Total Price: KSH 0</div>
+          </div>
+        </div>
 
       <!-- Wood Lamp Section -->
       <div class="category-container">
@@ -64,7 +74,7 @@
              The free opening and closing top cover gives you the flexibility to adjust the light to your desired atmosphere.
             </p>
             <p class="price">KSH 35,000</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-btn" data-price="35000">Add to Cart</button>
           </div>
 
           <!--woodlamp2-->
@@ -76,7 +86,7 @@
                Add this unique lamp with a hint of vintage vibe to your living room or as a bedside lamp.
             </p>
             <p class="price">KSH 30,000</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-btn" data-price="30000">Add to Cart</button>
           </div>
 
          <!--woodlamp3-->
@@ -90,7 +100,7 @@
               A must-have for any interior design enthusiast.
             </p>
             <p class="price">KSH 40,000</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-btn" data-price="40000">Add to Cart</button>
           </div>
 
            <!--woodlamp4-->
@@ -103,7 +113,7 @@
                The lampshade is made of fabric for a beautiful, modern look.
             </p>
             <p class="price">KSH 30,000</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-btn" data-price="30000">Add to Cart</button>
           </div>
 
             <!--woodlamp5-->
@@ -116,7 +126,7 @@
                An ideal piece for any room!
             </p>
             <p class="price">KSH 35,000</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-btn" data-price="35000">Add to Cart</button>
           </div>
 
         </div>
@@ -133,7 +143,7 @@
               Experience the wonder of a miniature moon levitating in midair with the Magnetic Levitating Moon Lamp. 
             </p>
             <p class="price">KSH 10,000</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-btn" data-price="10000">Add to Cart</button>
           </div>
             <!--spacelamp2-->
           <div class="product-item">
@@ -143,7 +153,7 @@
             This light will work as a glittering planet in boundless unverse.
           </p>
           <p class="price">KSH 12,000</p>
-            <button>Add to Cart</button>
+          <button class="add-to-cart-btn" data-price="12000">Add to Cart</button>
           </div>
           <!--spacelamp3-->
           <div class="product-item">
@@ -153,7 +163,7 @@
               3D Printed , Magnetic Levitation , Floats & Spins Automatically , Touch Sensor Controls , 3 Lighting Modes: White, Warm White, Warm Yellow
             </p>
             <p class="price">KSH 9,000</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-btn" data-price="9000">Add to Cart</button>
           </div>
           <!--spacelamp4-->
           <div class="product-item">
@@ -163,7 +173,7 @@
               3D Printed, Magnetic Levitation, Floats & Spins Automatically, Touch Sensor Controls, 3 Lighting Modes: White, Warm White, Warm Yellow.
             </P>
             <p class="price">KSH 9,000</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-btn" data-price="9000">Add to Cart</button>
           </div>
           <!--spacelamp5-->
           <div class="product-item">
@@ -176,7 +186,7 @@
                 Transform your interior into a luminous paradise with the Venus Lamp
             </p>
             <p class="price">KSH 9,000</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-btn" data-price="9000">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -194,7 +204,7 @@
                The yellow pleated shade provides a warm golden hue, bringing a gentle and calming atmosphere to any space.
             </p>
             <p class="price">KSH 20,000</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-btn" data-price="20000">Add to Cart</button>
           </div>
           <!--ElegantLamp2-->
           <div class="product-item">
@@ -204,7 +214,7 @@
               Vase lamp, bedroom lamp, night lamp, square lamp, glass bedside lamp, warm light lamp, vase night lights, Flower Lantern, Bedroom decor
               </p>
               <p class="price">KSH 28,000</p>
-            <button>Add to Cart</button>
+              <button class="add-to-cart-btn" data-price="28000">Add to Cart</button>
           </div>
           <!--ElegantLamp3-->
           <div class="product-item">
@@ -217,7 +227,7 @@
                With a wood construction, this outdoor and indoor portable table lamp can withstand the elements of nature.
             </p>
             <p class="price">KSH 20,000</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-btn" data-price="20000">Add to Cart</button>
           </div>
           <!--ElegantLamp4-->
           <div class="product-item">
@@ -230,7 +240,7 @@
                This AMPM exclusive is an elegant and timeless piece.
             </p>
             <p class="price">KSH 26,000</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-btn" data-price="26000">Add to Cart</button>
           </div>
           <!--ElegantLamp5-->
           <div class="product-item">
@@ -242,7 +252,7 @@
               Enhance your home or office with a piece that not only illuminates but also elevates your decor.
             </p>
             <p class="price">KSH 28,000</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-btn" data-price="28000">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -259,7 +269,7 @@
               Add your own choice of lampshade, sold separately, and give it optimum visibility with this overarching design.
             </p>
             <p class="price">KSH 50,000</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-btn" data-price="50000">Add to Cart</button>
           </div>
           <!--FloorLamp2-->
           <div class="product-item">
@@ -270,7 +280,7 @@
               This curved floor light fixture sits on a beautiful marble base that is the perfect complement to the chic chrome finish
             </p>
             <p class="price">KSH 55,000</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-btn" data-price="55000">Add to Cart</button>
           </div>
           <!--FloorLamp3-->
           <div class="product-item">
@@ -282,7 +292,7 @@
               This lamp would make an impressive addition to any modern environment.
             </p>
             <p class="price">KSH 56,000</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-btn" data-price="56000">Add to Cart</button>
           </div>
           <!--FloorLamp4-->
           <div class="product-item">
@@ -293,7 +303,7 @@
               Its graceful lines and timeless design make it a chic and versatile choice for both home and office, creating an exclusive atmosphere with its tasteful luxury.
             </p>
             <p class="price">KSH 55,000</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-btn" data-price="55000">Add to Cart</button>
           </div>
           <!--FloorLamp5-->
           <div class="product-item">
@@ -304,9 +314,8 @@
               The lamp is crafted with a combination of metal and rattan, presenting a perfect fusion of nature and modernity. Its beige color complements various interior decoration styles.
             </p>
             <p class="price">KSH 49,000</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-btn" data-price="49000">Add to Cart</button>
           </div>
-          <!-- Repeat for more lamps -->
         </div>
       </div>
 
@@ -323,7 +332,7 @@
               Eye Caring Adjustable Brightness 3 Color Temperatures 20+ Hours Runtime, USB Reading Light for Bed
             </p>
             <p class="price">KSH 2,000</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-btn" data-price="2000">Add to Cart</button>
           </div>
 
           <!--booklights2-->
@@ -334,7 +343,7 @@
               Its gentle LED glow and kind smiling face make it a great book light for readers 
             </p>
             <p class="price">KSH 5,000</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-btn" data-price="5000">Add to Cart</button>
           </div>
           <!--booklights3-->
           <div class="product-item">
@@ -344,7 +353,7 @@
               Solid Color Plastic Book Lamp with 3 Dimmable Lighting Modes, Push Button Control, Adjustable Reading Light for Bed, Car, Dorm, Bedroom - USB Charged, Wall Mountable, 300mAh Lithium Battery
             </p>
             <p class="price">KSH 3,000</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-btn" data-price="3000">Add to Cart</button>
           </div>
           <!--booklights4-->
           <div class="product-item">
@@ -354,7 +363,7 @@
               Reading lamp Portable Flexible LED Book Light Reading Clip On Lamp Desk
             </p>
             <p class="price">KSH 4,000</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-btn" data-price="4000">Add to Cart</button>
           </div>
           <!--booklights5-->
           <div class="product-item">
@@ -364,38 +373,42 @@
                 Battery Powered LED Eye Protection Reading Light Adjustable Portable Desktop Small Night Lights 
               </p>
               <p class="price">KSH 6,000</p>
-            <button>Add to Cart</button>
-          </div>
-        </div>
-         <!-- Discounts Section -->
-         <div class="discount-container">
-          <div class="discount-scroll">
-            <!-- Student Discount -->
-            <div class="discount-item">
-              <h3>Student Discount</h3>
-              <p>Are you a student? Get 10% off on all products with a valid student ID.</p>
-              <button class="discount-button">Claim Your Discount</button>
-            </div>
-        
-            <!-- First-Time Purchase Discount -->
-            <div class="discount-item">
-              <h3>First-Time Purchase Discount</h3>
-              <p>New to CozyLights? Enjoy 15% off on your first purchase!</p>
-              <button class="discount-button">Get First-Time Discount</button>
-            </div>
+              <button class="add-to-cart-btn" data-price="6000">Add to Cart</button>
           </div>
         </div>
 
-      </section>
+
+        <section id="discounts" class="discount-section">
+          <div class="ads-container">
+            <!--student discounts-->
+            <div class="ad" >
+            <h3> Student Discount</h3>
+            <p>Get 10% off on all products with a valid student ID!</p>
+            <button class="claim-button" id="student-discount-btn">Claim Your Discount</button>
+            </div>
+          </div>
+          <!--Fisrt Time Discount-->
+          <div class="ads-container">
+          <div class="ad">
+            <h3>First-Timer Discount</h3>
+            <p>Get 15% off your first purchase! Don't miss out ! </p>
+            <button class="claim-button" id="first-time-discount-btn">Claim Your Discount</button>
+          </div>
+          </div>
+        </section>
+
    <!-- About Us Section -->
-<section id="about" class="about-us container">
+<section id="about" class="about-us section">
+  <div class="about-us container">
   <h2>About CozyLights</h2>
   <p>At CozyLights, we specialize in providing high-quality, stylish lamps that brighten up your living spaces.
      Our collection ranges from modern to vintage designs, ensuring that you find the perfect lamp to match your decor.</p>
+  </div>
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="contact-us container">
+<section id="contact" class="contact-us section">
+  <div class="contact-us container">
   <h2>Contact Us</h2>
   <form id="contact-form">
     <label for="name">Name:</label>
@@ -408,6 +421,7 @@
   </form>
 
   <p>If you have any questions, feel free to reach us at: <a href="mailto:support@cozylights.com">support@cozylights.com</a></p>
+  </div>
 </section> 
 
 </main>
@@ -415,6 +429,7 @@
 <!-- Footer -->
 <footer>
   <div class="container">
+    
     <p>&copy; 2024 Cozy Lights Lamp Store. All rights reserved.</p>
   </div>
 </footer>
