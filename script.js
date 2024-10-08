@@ -13,6 +13,27 @@ document
     }
   });
 
+  // Toggle User Modal
+const userIcon = document.querySelector(".user-icon");
+const userModal = document.querySelector(".user-modal");
+const closeUserModalButton = document.querySelector(".close-user-modal");
+
+userIcon.addEventListener("click", () => {
+  userModal.style.display = "block"; // Show user modal
+});
+
+// Close the user modal when 'x' is clicked
+closeUserModalButton.addEventListener("click", () => {
+  userModal.style.display = "none";
+});
+
+// Optional: Close the user modal when clicking outside the modal content
+window.addEventListener("click", (event) => {
+  if (event.target === userModal) {
+    userModal.style.display = "none";
+  }
+});
+
 //sliding ads
 let currentAd = 0;
 const ads = document.querySelectorAll(`.ad`);
@@ -56,7 +77,7 @@ addToCartButtons.forEach((button) => {
     const itemPrice = parseInt(event.target.getAttribute("data-price"));
     const itemName = event.target.previousElementSibling.previousElementSibling.textContent;
 
-    cartItems.push({ name: itemName, price: itemPrice });
+    cartItems.push({ name: itemName, price: itemPrice, quantity: 1, liked: false });
     updateCart();
   });
 });
@@ -67,11 +88,46 @@ function updateCart() {
   let totalPrice = 0;
   cartItemsList.innerHTML = ""; // Clear existing items
 
-  cartItems.forEach((item) => {
+  cartItems.forEach((item, index) => {
     const listItem = document.createElement("li");
-    listItem.textContent = `${item.name} - KSH ${item.price}`;
+    listItem.innerHTML = `
+      <span>${item.name} - KSH ${item.price * item.quantity}</span>
+      <button class="like-btn">${item.liked ? '❤️' : '🤍'}</button>
+      <button class="delete-btn">🗑️</button>
+      <button class="decrease-qty">-</button> ${item.quantity} <button class="increase-qty">+</button>
+    `;
     cartItemsList.appendChild(listItem);
-    totalPrice += item.price;
+
+    // Calculate total price based on quantity
+    totalPrice += item.price * item.quantity;
+
+    // Like button functionality
+    listItem.querySelector(".like-btn").addEventListener("click", () => {
+      item.liked = !item.liked;
+      updateCart();
+    });
+
+    // Delete button functionality
+    listItem.querySelector(".delete-btn").addEventListener("click", () => {
+      cartItems.splice(index, 1);
+      updateCart();
+    });
+
+    // Increase quantity
+    listItem.querySelector(".increase-qty").addEventListener("click", () => {
+      item.quantity++; // Increase quantity
+      updateCart();
+    });
+
+    // Decrease quantity
+    listItem.querySelector(".decrease-qty").addEventListener("click", () => {
+      if (item.quantity > 1) {
+        item.quantity--; // Decrease quantity
+      } else {
+        cartItems.splice(index, 1); // Remove item if quantity is 0
+      }
+      updateCart();
+    });
   });
 
   totalPriceEl.textContent = `Total Price: KSH ${totalPrice}`;
